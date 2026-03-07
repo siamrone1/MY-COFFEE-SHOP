@@ -140,3 +140,18 @@ body {
         }
     }
 }
+.sec3{
+  .img-gallery{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 379px 379px 379px;
+    grid-template-rows: auto;
+    gap: 20px;
+    img{
+      width: 100%;
+    }
+    #img5{
+      margin-top: -105px;
+    }
+  }
+}
