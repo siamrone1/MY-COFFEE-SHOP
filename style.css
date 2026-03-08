@@ -201,10 +201,19 @@ body {
   padding: 0 0 16px 0;
   box-shadow: 0px 5px 5px black;
   .fut-taxt{
+    display: flex;
+    color: #ffffff;
     .logo-fut{
       img{
         height: 55px;
       }
     }
+  }
+
+  .sos-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
   }
 }
