@@ -3,11 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   height: 100vh;
   width: 100wv;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .sec1 {
   background-image: url("./imgsorce/imgi_21_coffee-beans.svg");
   background-repeat: no-repeat;
@@ -15,20 +17,25 @@ body {
   background-color: #200c00;
   padding: 0 0 16px 0;
   box-shadow: 0px 5px 5px black;
+
   header {
     padding: 32px;
     font-size: 16px;
+
     nav {
       background-color: transparent;
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       .logo {
         margin: 0 0 0 32px;
+
         img {
           height: 45px;
         }
       }
+
       .manu {
         display: flex;
         align-items: center;
@@ -37,6 +44,7 @@ body {
         width: 621px;
         padding: 16px;
         margin: 16px 64px 16px 0;
+
         li {
           color: #ffffff;
           list-style: none;
@@ -46,146 +54,171 @@ body {
       }
     }
   }
+
   .hero {
     display: flex;
     align-items: start;
     justify-content: space-evenly;
+
     .taxt {
       width: 604px;
       margin: 64px 0 0 0;
       color: #ffffff;
+
       h1 {
         margin: 43px 0;
         font-size: 64px;
         width: 100%;
         font-weight: 600;
       }
+
       p {
         width: 560px;
         margin: 23px 0;
         font-size: 23px;
       }
     }
-    .img-hero{
-        height: 620px;
+
+    .img-hero {
+      height: 620px;
     }
   }
 }
 
-.heading{
-        text-align: center;
-        padding: 80px;
+.heading {
+  text-align: center;
+  padding: 80px;
 
-        h2{
-            font-size: 36px;
-            margin: 30px 0; 
-        }
-        p{
-            font-size: 20px;
-            margin: 20px 0;
-            color: #808080;
-        }
-    }
+  h2 {
+    font-size: 36px;
+    margin: 30px 0;
+  }
 
-.sec2{
-    .all-card{
+  p {
+    font-size: 20px;
+    margin: 20px 0;
+    color: #808080;
+  }
+}
+
+.sec2 {
+  .all-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 48px;
+
+    .card {
+      width: 300px;
+      height: 400px;
+      border-radius: 50px;
+      background-color: #452514;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .img-card {
+        background-color: #afbe97;
+        border-radius: 50px;
+        margin: auto;
+        margin: 8px;
+      }
+
+      .tast-card {
+        color: #ffffff;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
-        padding: 48px;
-        .card{
-            width: 300px;
-            height: 400px;
-            border-radius: 50px;
-            background-color: #452514;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            .img-card{
-                background-color: #afbe97;
-                border-radius: 50px;
-                margin: auto;
-                margin: 8px;
-            }
-            .tast-card{
-                color: #ffffff;
-                display: flex;
-                align-items: center;
-                justify-content: space-around;
-                margin: 10px 20px;
-                .taxt{
-                    
-                    padding-right: 20px;
-                    border-right: 2px solid white;
-                    height: 90%;
-                    h2{
-                        font-size: 25px;
-                        font-weight: 100;
-                    }
-                }
-                .price{
-                    display: flex;
-                    flex-direction: column;
-                    gap: 10px;
-                    h3{
-                        font-size: 30px;
-                    }
-                    a{
-                        color: #ff8f8f;
-                        text-decoration: none;
-                        cursor: help;
-                    }
-                }
-            }
+        justify-content: space-around;
+        margin: 10px 20px;
+
+        .taxt {
+
+          padding-right: 20px;
+          border-right: 2px solid white;
+          height: 90%;
+
+          h2 {
+            font-size: 25px;
+            font-weight: 100;
+          }
         }
+
+        .price {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          h3 {
+            font-size: 30px;
+          }
+
+          a {
+            color: #ff8f8f;
+            text-decoration: none;
+            cursor: help;
+          }
+        }
+      }
     }
+  }
 }
-.sec3{
-  .img-gallery{
+
+.sec3 {
+  .img-gallery {
     justify-content: center;
     display: grid;
     grid-template-columns: 379px 379px 379px;
     grid-template-rows: auto;
     gap: 20px;
-    img{
+
+    img {
       width: 100%;
     }
-    #img5{
+
+    #img5 {
       margin-top: -105px;
     }
   }
 }
-.sec4{
-  .all-pdt-card{
+
+.sec4 {
+  .all-pdt-card {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 40px;
-    .pdt-card{
+
+    .pdt-card {
       display: flex;
       flex-direction: column;
       gap: 10px;
       border-radius: 30px 30px 30px 30px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
       width: 400px;
-      .img{
-        img{
+
+      .img {
+        img {
           width: 100%;
           border-radius: 30px 30px 0 0;
         }
       }
-      .taxt{
+
+      .taxt {
         padding: 32px;
-        h2{
+
+        h2 {
           font-size: 24px;
         }
-        p{
+
+        p {
           margin: 16px 0;
           padding: 0 0 16px 0;
         }
-        a{
+
+        a {
           text-decoration: none;
-          h3{
+
+          h3 {
             color: #845f44;
           }
         }
@@ -193,27 +226,73 @@ body {
     }
   }
 }
-.sec5{
+
+.sec5 {
   margin-top: 80px;
   background-image: url("./imgsorce/imgi_21_coffee-beans.svg");
   background-size: 45rem;
   background-color: #200c00;
-  padding: 0 0 16px 0;
+  padding: 6px 0 16px 0;
   box-shadow: 0px 5px 5px black;
-  .fut-taxt{
+
+  .fut-taxt {
+    margin-top: 100px;
     display: flex;
+    align-items: center;
+    justify-content: space-around;
     color: #ffffff;
-    .logo-fut{
-      img{
+    gap: 110px;
+
+    .one,
+    .three,
+    .tow {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin: 16px 0;
+    a{
+        text-decoration: none;
+        color: #ff8f8f;
+      }
+      h1{
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .one {
+      h2 {
+        font-size: 36px;
+      }
+
+      p {
+        font-size: 20px;
+        color: #808080;
+        width: 400px;
+        }
+      }
+    }
+
+    .logo-fut {
+      img {
         height: 55px;
       }
     }
   }
 
-  .sos-logo{
+  .sos-logo {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
+    margin: 32px 0;
+
+    img {
+      height: 45px;
+    }
   }
-}
+
+  .copy {
+    text-align: center;
+    color: #808080;
+  }
