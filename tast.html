@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MY COFFEE SHOP · responsive</title>
+  <style>
+    /* reset & base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #fcf8f3;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    /* ----- section 1 (hero) ----- */
+    .sec1 {
+      background-image: url('imgsorce/imgi_21_coffee-beans.svg'); /* fallback bean pattern */
+      background-repeat: no-repeat;
+      background-size: 45rem;
+      background-color: #200c00;
+      padding: 0 0 1.5rem 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      color: white;
+    }
+
+    header {
+      padding: 1.5rem 1rem;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      height: 45px;
+      width: auto;
+      display: block;
+    }
+
+    .manu {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .manu li {
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 400;
+      white-space: nowrap;
+      cursor: default;
+      transition: color 0.2s;
+    }
+    .manu li:hover { color: #e4b393; }
+
+    .trogolbuton img {
+      height: 45px;
+      display: none;
+      cursor: pointer;
+      filter: brightness(0) invert(1);
+    }
+
+    /* hero row */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 1rem 2rem 2rem;
+    }
+
+    .hero .taxt {
+      max-width: 600px;
+      min-width: 300px;
+      flex: 1 1 400px;
+    }
+
+    .hero .taxt h1 {
+      font-size: clamp(2.5rem, 8vw, 4rem);
+      font-weight: 600;
+      line-height: 1.2;
+      margin: 1rem 0 1.5rem;
+    }
+
+    .hero .taxt p {
+      font-size: clamp(1.1rem, 4vw, 1.5rem);
+      color: #ddd;
+      max-width: 560px;
+    }
+
+    .img-hero {
+      flex: 0 1 400px;
+      text-align: center;
+    }
+    .img-hero img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      filter: drop-shadow(0 10px 10px rgba(0,0,0,0.5));
+    }
+
+    /* ----- shared headings ----- */
+    .heading {
+      text-align: center;
+      padding: 4rem 2rem 2rem;
+    }
+    .heading h2 {
+      font-size: clamp(2rem, 6vw, 2.8rem);
+      margin-bottom: 0.75rem;
+    }
+    .heading p {
+      font-size: 1.2rem;
+      color: #5f4e3c;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* ----- section 2 cards (best coffee) ----- */
+    .sec2 {
+      padding: 1rem 2rem 4rem;
+    }
+    .all-card {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      justify-content: center;
+      gap: 2.5rem;
+      margin-top: 2rem;
+    }
+    .card {
+      width: 280px;
+      background: #452514;
+      border-radius: 50px;
+      padding: 1rem 1rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 15px 20px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+    .card:hover { transform: scale(1.02); }
+    .img-card {
+      background: #afbe97;
+      border-radius: 40px;
+      padding: 1.5rem 0.5rem;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .img-card img {
+      width: 140px;
+      height: auto;
+      filter: drop-shadow(2px 6px 6px #3a2e1e);
+    }
+    .tast-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      color: white;
+      padding: 0 0.5rem;
+    }
+    .tast-card .taxt {
+      border-right: 2px solid white;
+      padding-right: 1rem;
+    }
+    .tast-card .taxt h2 {
+      font-size: 1.8rem;
+      font-weight: 300;
+    }
+    .price {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      align-items: flex-end;
+    }
+    .price h3 {
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+    .price a {
+      color: #ffb7a5;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+
+    /* ----- section 3 gallery (grid) ----- */
+    .sec3 {
+      padding: 1rem 2rem 4rem;
+      background: #f4ede5;
+    }
+    .img-gallery {
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 379px 379px 379px;
+        grid-template-rows: auto;
+        gap: 20px;
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+    .img-gallery .img {
+      overflow: hidden;
+      border-radius: 30px;
+      box-shadow: 0 8px 18px rgba(60, 30, 10, 0.15);
+    }
+    .img-gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s;
+    }
+    .img-gallery img:hover { transform: scale(1.05); }
+
+    /* special offset for one image (optional keep) */
+    #img5 { margin-top: 0; } /* reset, we rely on grid */
+
+    /* ----- section 4 updates (cards) ----- */
+    .sec4 {
+      padding: 1rem 2rem 5rem;
+    }
+    .all-pdt-card {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      justify-content: center;
+      gap: 2.5rem;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    .pdt-card {
+      width: 340px;
+      background: white;
+      border-radius: 40px;
+      box-shadow: 0 15px 25px rgba(84, 48, 22, 0.12);
+      transition: all 0.2s;
+      overflow: hidden;
+    }
+    .pdt-card:hover { box-shadow: 0 20px 30px rgba(99, 59, 28, 0.25); }
+    .pdt-card .img img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 40px 40px 0 0;
+    }
+    .pdt-card .taxt {
+      padding: 1.8rem 1.8rem 2rem;
+    }
+    .pdt-card .taxt h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+    .pdt-card .taxt p {
+      color: #4d3b2b;
+      margin: 0.8rem 0 1.2rem;
+      line-height: 1.5;
+    }
+    .pdt-card .taxt a {
+      text-decoration: none;
+    }
+    .pdt-card .taxt h3 {
+      color: #a8663a;
+      font-size: 1.3rem;
+      display: inline-block;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .pdt-card .taxt h3:hover { border-color: #a8663a; }
+
+    /* ----- footer / sec5 ----- */
+    .sec5 {
+      background-image: url('imgsorce/imgi_21_coffee-beans.svg');
+      background-size: 200px;
+      background-color: #200c00;
+      color: white;
+      padding: 3rem 2rem 1.5rem;
+      margin-top: 2rem;
+    }
+    .fut-taxt {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 3rem 2rem;
+      max-width: 1300px;
+      margin: 0 auto 3rem;
+    }
+    .one, .tow, .three {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      min-width: 200px;
+    }
+    .one p { color: #c0b09a; max-width: 340px; }
+    .tow a, .three a {
+      color: #f3b795;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+    .tow a:hover, .three a:hover { text-decoration: underline; }
+    .tow h1, .three h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+    .logo-fut img { height: 60px; }
+
+    .sos-logo {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2.5rem 0 2rem;
+    }
+    .sos-logo .logo img {
+      height: 45px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      transition: transform 0.2s;
+    }
+    .sos-logo .logo img:hover { transform: scale(1.15); }
+
+    .copy {
+      text-align: center;
+      color: #b9a187;
+      font-size: 0.95rem;
+      border-top: 1px solid #4d3624;
+      padding-top: 1.8rem;
+    }
+
+    /* ---------- responsive breakpoints ---------- */
+
+    /* tablet & medium screens */
+    @media (max-width: 900px) {
+      .hero .taxt h1 { font-size: 3rem; }
+      .fut-taxt { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* mobile main breakpoint 778px */
+    @media (max-width: 778px) {
+      /* header collapse */
+      .manu li:not(:last-child) { display: none; }
+      .trogolbuton img { display: block; }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero .taxt p { margin-left: auto; margin-right: auto; }
+
+      /* section2 cards become column but fine */
+      .all-card { gap: 2rem; }
+
+      /* gallery grid single column already ok */
+
+      /* product cards */
+      .pdt-card { width: 100%; max-width: 450px; }
+
+      /* footer */
+      .fut-taxt { gap: 2rem; }
+      .one p { width: auto; }
+    }
+
+    /* small phones */
+    @media (max-width: 480px) {
+      .logo img { height: 38px; }
+      .manu { gap: 1rem; }
+      .hero .taxt h1 { font-size: 2.4rem; }
+      .heading { padding: 2.5rem 1rem; }
+      .sec2, .sec3, .sec4 { padding-left: 1rem; padding-right: 1rem; }
+      .card { width: 100%; }
+    }
+
+    /* re-enable previously hidden sections (they were set to display:none) */
+    .sec2, .sec3, .sec4, .sec5 {
+      display: block; /* override old inline style */
+    }
+    /* additionally ensure sec2 etc visible */
+    .sec2 { display: block; }
+    .sec3 { display: block; }
+    .sec4 { display: block; }
+    .sec5 { display: block; }
+  </style>
+</head>
+<body>
+  <div class="sec1">
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="./imgsorce/logo/COFFEE W LOGO.png" alt="COFFEE W LOGO">
+        </div>
+        <ul class="manu">
+          <li>Home</li>
+          <li>Shop</li>
+          <li>Our Gallery</li>
+          <li>News</li>
+          <li>Reservations</li>
+          <div class="trogolbuton">
+            <img src="./imgsorce/icons8-what-3-words-64.png" alt="menu">
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <div class="hero">
+      <div class="taxt">
+        <h1>Keep your dreams aroused with a cup of coffee.</h1>
+        <p>The coffee ideas shared by these generators are not cool at all, as they are not a human being.</p>
+      </div>
+      <div class="img-hero">
+        <img src="./imgsorce/imgi_2_hero-coffee.png" alt="hero coffee cup">
+      </div>
+    </div>
+  </div>
+
+  <div class="sec2">
+    <div class="heading">
+      <h2>Our Best Coffees</h2>
+      <p>Here are some new flavors that are coming soon!</p>
+    </div>
+    <div class="all-card">
+      <div class="card">
+        <div class="img-card">
+          <img src="./imgsorce/imgi_3_svgegg-1.svg" alt="caramel coffee">
+        </div>
+        <div class="tast-card">
+          <div class="taxt"><h2>Caramel</h2></div>
+          <div class="price"><h3>$5.99</h3><a href="#">ORDER NOW</a></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="img-card">
+          <img src="./imgsorce/imgi_4_svgegg-2.svg" alt="vanilla coffee">
+        </div>
+        <div class="tast-card">
+          <div class="taxt"><h2>Vanilla</h2></div>
+          <div class="price"><h3>$6.50</h3><a href="#">ORDER NOW</a></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="img-card">
+          <img src="./imgsorce/imgi_5_svgegg-3.svg" alt="mocha">
+        </div>
+        <div class="tast-card">
+          <div class="taxt"><h2>Mocha</h2></div>
+          <div class="price"><h3>$7.25</h3><a href="#">ORDER NOW</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec3">
+    <div class="heading">
+      <h2>Our Gallery</h2>
+      <p>Check out our gallery!</p>
+    </div>
+    <div class="img-gallery">
+      <div class="img" id="img1"><img src="./imgsorce/imgi_6_pic1.png" alt="pic1"></div>
+      <div class="img" id="img2"><img src="./imgsorce/imgi_7_pic2.png" alt="pic2"></div>
+      <div class="img" id="img3"><img src="./imgsorce/imgi_8_pic3.png" alt="pic3"></div>
+      <div class="img" id="img4"><img src="./imgsorce/imgi_9_pic4.png" alt="pic4"></div>
+      <div class="img" id="img5"><img src="./imgsorce/imgi_10_pic5.png" alt="pic5"></div>
+      <div class="img" id="img6"><img src="./imgsorce/imgi_11_pic6.png" alt="pic6"></div>
+    </div>
+  </div>
+
+  <div class="sec4">
+    <div class="heading">
+      <h2>Our Updates</h2>
+      <p>A cup of brewed coffee represents a contribution of up to 1.8 grams of fiber of the recommended.</p>
+    </div>
+    <div class="all-pdt-card">
+      <div class="pdt-card">
+        <div class="img"><img src="./imgsorce/imgi_18_card1.png" alt="chocolate"></div>
+        <div class="taxt"><h2>Chocolate Coffee</h2><p>These advertising mottos are targeted to the 56% of coffee drinking consumers.</p><a href="#"><h3>Learn More ➚</h3></a></div>
+      </div>
+      <div class="pdt-card">
+        <div class="img"><img src="./imgsorce/imgi_19_card2.png" alt="vanilla"></div>
+        <div class="taxt"><h2>Best Coffee Vanilla</h2><p>These advertising mottos are targeted to the 56% of coffee drinking consumers.</p><a href="#"><h3>Learn More ➚</h3></a></div>
+      </div>
+      <div class="pdt-card">
+        <div class="img"><img src="./imgsorce/imgi_20_card3.png" alt="caramel"></div>
+        <div class="taxt"><h2>Caramel Coffee Taste</h2><p>These advertising mottos are targeted to the 56% of coffee drinking consumers.</p><a href="#"><h3>Learn More ➚</h3></a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec5">
+    <div class="fut-taxt">
+      <div class="one">
+        <div class="logo-fut"><img src="./imgsorce/logo/COFFEE W LOGO.png" alt="logo"></div>
+        <p>Creating a catchy tagline coffee shop business growth.</p>
+        <p>+1 (123)-123-4567</p>
+      </div>
+      <div class="tow">
+        <h1>Categories</h1>
+        <a href="#">Ashley Szekeres Art</a>
+        <a href="#">Merchandise</a>
+        <a href="#">Gift Certificates</a>
+      </div>
+      <div class="three">
+        <h1>Information</h1>
+        <a href="#">Coffee Beans</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Blog</a>
+      </div>
+    </div>
+    <div class="sos-logo">
+      <div class="logo"><img src="./imgsorce/imgi_15_Facebook.png" alt="fb"></div>
+      <div class="logo"><img src="./imgsorce/imgi_16_Instagram.png" alt="ig"></div>
+      <div class="logo"><img src="./imgsorce/imgi_17_Linkdin.png" alt="linkedin"></div>
+      <div class="logo"><img src="./imgsorce/imgi_14_Twitter.png" alt="twitter"></div>
+    </div>
+    <div class="copy"><p>© 2022 Developed by Eriq Moore (responsive)</p></div>
+  </div>
+</body>
+</html>

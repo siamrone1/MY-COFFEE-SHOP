@@ -317,6 +317,8 @@ body {
   header {
     padding: 32px;
     font-size: 16px;
+    background-size: 30rem;
+
 
     nav {
       .logo {
@@ -346,15 +348,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: start;
+    text-align: center;
+    width: fit-content;
 
     .taxt {
-      width: 604px;
+      width: 404px;
       margin: 64px 0 0 0;
       color: #ffffff;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       h1 {
         text-align: center;
         margin: 43px 0;
@@ -365,14 +370,17 @@ body {
 
       p {
         text-align: center;
-        width: 560px;
+        width: 404px;
         margin: 23px 0;
         font-size: 23px;
       }
     }
 
     .img-hero {
-      height: 420px;
+      height: 320px;
+      img{
+        width: 100%;
+      }
     }
   }
 
