@@ -109,7 +109,7 @@ body {
 }
 
 .sec2 {
-  display: none;
+  /* display: none; */
   .all-card {
     display: flex;
     align-items: center;
@@ -172,7 +172,7 @@ body {
 }
 
 .sec3 {
-  display: none;
+  /* display: none; */
   .img-gallery {
     justify-content: center;
     display: grid;
@@ -191,7 +191,7 @@ body {
 }
 
 .sec4 {
-  display: none;
+  /* display: none; */
   .all-pdt-card {
     display: flex;
     align-items: center;
@@ -238,7 +238,7 @@ body {
 }
 
 .sec5 {
-  display: none;
+  /* display: none; */
   margin-top: 80px;
   background-image: url("./imgsorce/imgi_21_coffee-beans.svg");
   background-size: 45rem;
