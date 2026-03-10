@@ -204,7 +204,7 @@
     .img-gallery {
         justify-content: center;
         display: grid;
-        grid-template-columns: 379px 379px 379px;
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
         gap: 20px;
         max-width: 1300px;
@@ -362,6 +362,9 @@
       .all-card { gap: 2rem; }
 
       /* gallery grid single column already ok */
+        .img-gallery {
+          grid-template-columns: repeat(2, 1fr);
+    }
 
       /* product cards */
       .pdt-card { width: 100%; max-width: 450px; }
